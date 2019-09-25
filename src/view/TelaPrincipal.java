@@ -54,6 +54,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -69,7 +70,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setTitle("Sistema");
         setMinimumSize(new java.awt.Dimension(800, 400));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLData.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
 
@@ -144,6 +145,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem8);
+
+        jMenuItem9.setText("Marca");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem9);
 
         jMenuBar1.add(jMenu1);
 
@@ -250,6 +259,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         areaTrabalho.add(relatorioCid);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        TelaCadMarca tabelaMarca = new TelaCadMarca();
+        tabelaMarca.setVisible(true);
+        centralizarForm(tabelaMarca);
+        areaTrabalho.add(tabelaMarca);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
     public void centralizarForm(JInternalFrame frame) {
         Dimension desktopSize = areaTrabalho.getSize();
         Dimension jInternalFrameSize = frame.getSize();
@@ -332,6 +348,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
